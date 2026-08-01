@@ -1,35 +1,5 @@
 [
-  {
-    "id": "color-kissed-air-plant",
-    "name": "Color-Kissed Air Plant",
-    "category": "Air Plants",
-    "description": "A real air plant from Lisa's collection with bold natural color. Final name, size, care notes, price, and availability still need Lisa's approval.",
-    "price": "Demo listing",
-    "status": "Preview",
-    "image": "assets/plant-closeup.webp",
-    "alt": "Close view of a red and green air plant held in a hand",
-    "purchaseUrl": ""
-  },
-  {
-    "id": "strange-little-display",
-    "name": "Strange Little Display",
-    "category": "Curious Creations",
-    "description": "A one-of-a-kind air plant display surrounded by the tiny fantasy pieces Lisa loves to collect and create.",
-    "price": "Demo listing",
-    "status": "Preview",
-    "image": "assets/plant-room.webp",
-    "alt": "Collection of air plants displayed with whimsical figurines and containers",
-    "purchaseUrl": ""
-  },
-  {
-    "id": "air-plant-table",
-    "name": "Air Plant Collection",
-    "category": "Air Plants",
-    "description": "A sample collection showing the mix of shapes, colors, containers, shells, and little oddities the shop can feature.",
-    "price": "Demo listing",
-    "status": "Preview",
-    "image": "assets/plant-table.webp",
-    "alt": "Large collection of air plants arranged on a pink and white table covering",
-    "purchaseUrl": ""
-  }
+  {"id":"air-plant-placeholder","name":"Air Plant Feature","category":"Air Plants","description":"Decorative placeholder for a future air plant listing. Final item details and availability require owner approval.","price":"Demo inventory","status":"Illustrated preview","motif":"sprout","purchaseUrl":""},
+  {"id":"succulent-placeholder","name":"Succulent Feature","category":"Succulents","description":"Decorative placeholder for a future succulent listing. Final item details and availability require owner approval.","price":"Demo inventory","status":"Illustrated preview","motif":"moon","purchaseUrl":""},
+  {"id":"creation-placeholder","name":"Curious Creation","category":"Handmade Displays","description":"Decorative placeholder for a future handmade creation. Final item details and availability require owner approval.","price":"Demo inventory","status":"Illustrated preview","motif":"mushroom","purchaseUrl":""}
 ]
