@@ -7,13 +7,12 @@
 - Focus: air plants and succulents, with freedom to sell other curious items
 - Visual direction: cute, feminine, whimsical woodland fantasy
 - Preferred colors: lavender, pink, pastel colors, with selected bold fantasy colors
-- The three supplied Strange Little Things woodland-fantasy graphics are approved for the demo
-- Supplied real plant photos were examples only and must not appear in the site or assets
+- The three supplied Strange Little Things graphics are approved for the demo
 - RedBald LLC should receive website credit in the footer
 
 ## Demo goals
 - Create a polished landing page and product showcase
-- Use decorative illustrated placeholders until Lisa approves future product photography
+- Use Lisa's real plant photos
 - Show how unique items and quantity-based products can coexist
 - Include a Facebook area, but do not invent the URL
 - Include a browser-only demo product manager
