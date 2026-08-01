@@ -4,51 +4,180 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow, noarchive">
-  <meta name="description" content="Strange Little Things is a whimsical demo shop for air plants, succulents, handmade displays, and curious creations.">
+  <meta name="description" content="Strange Little Things is a whimsical demo shop for air plants, succulents, and curious creations.">
   <link rel="canonical" href="https://strangelittlethings.com/">
   <link rel="icon" href="assets/favicon.png" type="image/png">
   <link rel="preload" href="assets/logo-cottagecore.webp" as="image" type="image/webp">
   <link rel="stylesheet" href="styles.css">
-  <title>Strange Little Things | Air Plants, Succulents & Curious Creations</title>
+  <title>Strange Little Things | Air Plants, Succulents & Whimsy</title>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-  <div class="demo-bar" role="status">Private staging garden — listings, buying options, and Facebook are demonstrations only.</div>
+
+  <div class="demo-bar" role="status">
+    Staging garden: products, checkout, Facebook, and contact links are not live yet.
+  </div>
+
   <header class="site-header">
-    <a class="brand" href="#top" aria-label="Strange Little Things home"><span class="brand-mark" aria-hidden="true">✦</span><span><strong>Strange Little Things</strong><small>Plants, displays & curious creations</small></span></a>
-    <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav"><span class="sr-only">Open menu</span><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span></button>
-    <nav id="site-nav" class="site-nav" aria-label="Primary navigation"><a href="#featured">Featured</a><a href="#categories">Shop categories</a><a href="#about">About Lisa</a><a href="#facebook">Facebook</a></nav>
+    <a class="brand" href="#top" aria-label="Strange Little Things home">
+      <img src="assets/logo-woodland-badge.webp" alt="" width="72" height="72">
+      <span>
+        <strong>Strange Little Things</strong>
+        <small>Air plants, succulents & whimsy</small>
+      </span>
+    </a>
+
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span class="sr-only">Open menu</span>
+      <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+    </button>
+
+    <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+      <a href="#shop">Little finds</a>
+      <a href="#about">The story</a>
+      <a href="#facebook">Facebook</a>
+      <a class="nav-admin" href="admin/">Demo manager</a>
+    </nav>
   </header>
+
   <main id="main">
-    <section id="top" class="hero" aria-labelledby="hero-title">
+    <section id="top" class="hero">
       <div class="hero-copy">
-        <p class="eyebrow">A little wild. A little wonderful.</p><h1 id="hero-title">Strange Little Things</h1>
-        <p class="hero-text">A magical home for air plants, succulents, handmade displays, and other curious creations.</p>
-        <div class="hero-actions"><a class="button button-primary" href="#featured">View featured items</a><a class="button button-secondary facebook-link is-disabled" href="#facebook" aria-disabled="true">Facebook URL pending</a></div>
-        <p class="demo-note"><span aria-hidden="true">☾</span> This private demo contains example inventory, not live products.</p>
+        <p class="eyebrow">Tiny things. Magic inside.</p>
+        <h1>A curious little corner for plants, gifts, and whatever makes Lisa smile.</h1>
+        <p class="hero-text">
+          Strange Little Things is growing into a playful home for air plants, succulents,
+          handmade displays, and one-of-a-kind finds. This is the first private demo.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#shop">Browse the demo shop</a>
+          <a class="button button-secondary facebook-link is-disabled" href="#facebook" aria-disabled="true">Facebook coming soon</a>
+        </div>
+        <ul class="hero-notes" aria-label="Shop features">
+          <li>Unique and small-batch items</li>
+          <li>Shipping and local pickup planned</li>
+          <li>Air plants first, but never only air plants</li>
+        </ul>
       </div>
-      <div class="hero-art"><span class="sparkle sparkle-one" aria-hidden="true">✦</span><span class="sparkle sparkle-two" aria-hidden="true">✧</span><img src="assets/logo-cottagecore.webp" alt="Strange Little Things woodland illustration with a dressed-up rabbit and raccoon holding plants" width="900" height="900"></div>
+
+      <div class="hero-art" aria-label="Strange Little Things cottagecore logo illustration">
+        <span class="sparkle sparkle-one" aria-hidden="true">✦</span>
+        <span class="sparkle sparkle-two" aria-hidden="true">✧</span>
+        <img src="assets/logo-cottagecore.webp" alt="Whimsical Strange Little Things logo with a dressed-up rabbit and raccoon holding plants" width="900" height="900">
+      </div>
     </section>
-    <section id="featured" class="section" aria-labelledby="featured-title">
-      <div class="section-heading"><div><p class="eyebrow">Gathered from the glade</p><h2 id="featured-title">Featured little finds</h2></div><p>Decorative placeholders show how future items can look without using unapproved product photography. Every listing is demonstration inventory.</p></div>
+
+    <section class="ribbon" aria-label="Featured categories">
+      <span>Air plants</span><span>Succulents</span><span>Curious containers</span><span>Strange little gifts</span>
+    </section>
+
+    <section id="shop" class="section shop-section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">The little shop</p>
+          <h2>Featured finds</h2>
+        </div>
+        <p>These are demo listings built from Lisa's real plant photos. Names, prices, quantities, and sales links are intentionally not live yet.</p>
+      </div>
+
       <div id="product-grid" class="product-grid" aria-live="polite"></div>
+
+      <div class="shop-note">
+        <img src="assets/logo-woodland-badge.webp" alt="Strange Little Things raccoon badge logo" width="190" height="190">
+        <div>
+          <h3>Built for one-of-a-kind and repeat items</h3>
+          <p>The final shop can support unique plants that sell once, regular inventory with quantities, local pickup, shipping, Facebook sales, and direct website checkout.</p>
+        </div>
+      </div>
     </section>
-    <section id="categories" class="category-band" aria-labelledby="categories-title">
-      <div class="category-art"><img src="assets/logo-woodland-badge.webp" alt="Strange Little Things raccoon woodland badge" width="1024" height="1024" loading="lazy"></div>
-      <div class="category-copy"><p class="eyebrow">Choose a winding path</p><h2 id="categories-title">Shop categories</h2><div class="category-grid">
-        <article><span aria-hidden="true">❧</span><h3>Air plants</h3><p>A future home for approved air plant listings.</p></article>
-        <article><span aria-hidden="true">☘</span><h3>Succulents</h3><p>A future home for approved succulent listings.</p></article>
-        <article><span aria-hidden="true">✦</span><h3>Curious creations</h3><p>Handmade displays and other one-of-a-kind ideas.</p></article>
-      </div></div>
+
+    <section id="about" class="section story-section">
+      <div class="story-art">
+        <img src="assets/logo-raccoon-shop.webp" alt="Whimsical raccoon holding an air plant in a teacup beside a tiny woodland shop" width="800" height="800" loading="lazy">
+      </div>
+      <div class="story-copy">
+        <p class="eyebrow">Made because she loves it</p>
+        <h2>A hobby can still have a beautiful home.</h2>
+        <p>
+          Lisa collects, grows, decorates, and dreams up strange little arrangements because it makes her happy.
+          The site should feel like walking into her corner of the house: colorful, curious, feminine, and full of tiny surprises.
+        </p>
+        <p>
+          The final wording will come from Lisa. This demo establishes the look, the product structure, and the path toward easy phone-friendly listings.
+        </p>
+        <div class="palette" aria-label="Proposed color palette">
+          <span style="--swatch:#8765b8">Lavender</span>
+          <span style="--swatch:#f28fbd">Pink</span>
+          <span style="--swatch:#ffb36b">Peach</span>
+          <span style="--swatch:#94c9b3">Mint</span>
+          <span style="--swatch:#4e2d6f">Fantasy plum</span>
+        </div>
+      </div>
     </section>
-    <section id="about" class="section story-section" aria-labelledby="about-title">
-      <div class="story-copy"><p class="eyebrow">About Lisa</p><h2 id="about-title">A welcoming place for little things that spark joy.</h2><p>Strange Little Things is Lisa’s hobby shop concept, focused on air plants, succulents, handmade displays, and room for whatever curious creations come next.</p><p class="approval-note">This short introduction is demo copy. Lisa’s final story and wording still need owner approval.</p></div>
-      <div class="story-art"><img src="assets/logo-raccoon-shop.webp" alt="Whimsical raccoon holding an air plant in a teacup beside a tiny woodland shop" width="1024" height="1024" loading="lazy"></div>
+
+    <section class="section gallery-section">
+      <div class="section-heading compact">
+        <div>
+          <p class="eyebrow">Real plants, real personality</p>
+          <h2>Lisa's growing collection</h2>
+        </div>
+      </div>
+      <div class="photo-collage">
+        <figure class="photo-wide">
+          <img src="assets/plant-room.webp" alt="Air plants and whimsical displays arranged throughout a room" width="1500" height="1125" loading="lazy">
+          <figcaption>Air plants mixed with tiny characters, containers, mushrooms, shells, and whatever fits the mood.</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/plant-table.webp" alt="Collection of air plants arranged across a table" width="1500" height="1125" loading="lazy">
+          <figcaption>A mix of individual plants and ready-to-display pieces.</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/plant-closeup.webp" alt="Close view of a naturally red and green air plant" width="750" height="1000" loading="lazy">
+          <figcaption>Color, shape, and personality make every plant different.</figcaption>
+        </figure>
+      </div>
     </section>
-    <section id="facebook" class="section social-section" aria-labelledby="facebook-title"><div><p class="eyebrow">Meet beneath the moon</p><h2 id="facebook-title">Facebook & future buying options</h2><p>Lisa’s verified Facebook URL has not been supplied. When it is approved, this placeholder can link visitors to her page. Selling, payments, shipping, and pickup options remain undecided and are not active.</p></div><a class="button button-light facebook-link is-disabled" href="#facebook" aria-disabled="true">Facebook URL pending</a></section>
-    <aside class="manager-link" aria-label="Product manager demonstration"><span>Site workflow preview</span><a href="admin/">Open the browser-only product manager demonstration <span aria-hidden="true">→</span></a></aside>
+
+    <section id="facebook" class="section social-section">
+      <div>
+        <p class="eyebrow">Follow the strange</p>
+        <h2>Facebook will be the first live connection.</h2>
+        <p>Once Lisa's real Facebook page URL is added, this section will send visitors directly to her posts, live sales, messages, and new-item updates.</p>
+      </div>
+      <a class="button button-primary facebook-link is-disabled" href="#facebook" aria-disabled="true">Facebook link coming soon</a>
+    </section>
+
+    <section class="section manager-section">
+      <div class="manager-card">
+        <p class="eyebrow">Demo shop manager</p>
+        <h2>Try the product-listing workflow.</h2>
+        <p>The included manager lets Lisa create sample listings, preview them, and export the product data. It does not publish to the live site yet.</p>
+        <a class="button button-secondary" href="admin/">Open demo manager</a>
+      </div>
+      <div class="next-step-card">
+        <h3>What becomes real next</h3>
+        <ul>
+          <li>Lisa signs in from her phone</li>
+          <li>Uploads photos and sets price and quantity</li>
+          <li>Chooses shipping, pickup, Facebook, or website checkout</li>
+          <li>Marks unique items sold with one tap</li>
+        </ul>
+      </div>
+    </section>
   </main>
-  <footer class="site-footer"><div><strong>Strange Little Things</strong><span>A private, noindex website demonstration.</span></div><nav aria-label="Footer navigation"><a href="privacy.html">Privacy draft</a><a href="admin/">Demo manager</a><a href="https://redbald.com" rel="noopener">Website by RedBald LLC</a></nav></footer>
+
+  <footer class="site-footer">
+    <div>
+      <strong>Strange Little Things</strong>
+      <span>Air plants, succulents, curious creations, and room for whatever comes next.</span>
+    </div>
+    <nav aria-label="Footer navigation">
+      <a href="privacy.html">Privacy draft</a>
+      <a href="admin/">Demo manager</a>
+      <a href="https://redbald.com" rel="noopener">Website by RedBald LLC</a>
+    </nav>
+  </footer>
+
   <script src="app.js" defer></script>
 </body>
 </html>

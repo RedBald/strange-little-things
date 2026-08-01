@@ -34,12 +34,13 @@ function createProductCard(product, config) {
   const imageWrap = document.createElement("div");
   imageWrap.className = "product-image-wrap";
 
-  const illustration = document.createElement("div");
-  illustration.className = `placeholder-art placeholder-${product.motif}`;
-  illustration.setAttribute("role", "img");
-  illustration.setAttribute("aria-label", `Decorative ${product.category} listing placeholder`);
-  illustration.innerHTML = '<span class="placeholder-moon" aria-hidden="true">☾</span><span class="placeholder-plant" aria-hidden="true">❧</span><span class="placeholder-stars" aria-hidden="true">✦ · ✧</span>';
-  imageWrap.append(illustration, textElement("span", "product-badge", product.status));
+  const image = document.createElement("img");
+  image.src = product.image;
+  image.alt = product.alt;
+  image.loading = "lazy";
+  image.width = 900;
+  image.height = 760;
+  imageWrap.append(image, textElement("span", "product-badge", product.status));
 
   const body = document.createElement("div");
   body.className = "product-body";
