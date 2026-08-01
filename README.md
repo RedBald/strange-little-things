@@ -6,7 +6,7 @@ A complete static staging site for **StrangeLittleThings.com**.
 
 - Responsive landing page
 - Three approved Strange Little Things graphics
-- Three real plant photos
+- Decorative, accessible product placeholders with no product photography
 - JSON-driven demo product grid
 - Facebook link placeholder
 - Browser-only demo product manager at `/admin/`
@@ -45,7 +45,7 @@ dist
 
 - `src/site-config.json` contains the Facebook URL and contact placeholder.
 - `src/products.json` contains the public demo listings.
-- `src/assets/` contains all images.
+- `src/assets/` contains the three approved woodland-fantasy graphics and favicon.
 - `/admin/` is only a browser-only workflow demonstration. It does not publish.
 
 ## Important

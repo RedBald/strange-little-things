@@ -40,9 +40,11 @@ function render() {
     const article = document.createElement("article");
     article.className = "admin-product";
 
-    const image = document.createElement("img");
-    image.src = `../${product.image}`;
-    image.alt = product.alt;
+    const illustration = document.createElement("div");
+    illustration.className = `admin-placeholder motif-${product.motif || "sprout"}`;
+    illustration.setAttribute("role", "img");
+    illustration.setAttribute("aria-label", `Decorative placeholder for ${product.name}`);
+    illustration.textContent = product.motif === "moon" ? "☾ ✦" : product.motif === "mushroom" ? "♠ ✧" : "❧ ✦";
 
     const copy = document.createElement("div");
     addText(copy, "h3", product.name);
@@ -54,7 +56,7 @@ function render() {
     remove.dataset.remove = String(index);
     remove.textContent = "Remove";
 
-    article.append(image, copy, remove);
+    article.append(illustration, copy, remove);
     list.append(article);
   });
 }
@@ -70,8 +72,7 @@ form?.addEventListener("submit", (event) => {
     price: String(data.get("price") || "Ask Lisa").trim(),
     quantity: Number(data.get("quantity") || 1),
     description: String(data.get("description") || "").trim(),
-    image: String(data.get("image") || "assets/plant-closeup.webp").trim(),
-    alt: String(data.get("alt") || "Product image").trim(),
+    motif: String(data.get("motif") || "sprout"),
     purchaseUrl: String(data.get("purchaseUrl") || "").trim(),
     status: "Draft"
   });
