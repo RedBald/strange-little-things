@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <link rel="stylesheet" href="admin.css">
+  <title>Demo Product Manager | Strange Little Things</title>
+</head>
+<body>
+  <header class="admin-header">
+    <div>
+      <p>Private demo</p>
+      <h1>Strange Little Things product manager</h1>
+    </div>
+    <a href="../">View site</a>
+  </header>
+
+  <main class="admin-layout">
+    <section class="panel">
+      <h2>Create a sample listing</h2>
+      <p class="notice">This demo saves only in this browser. It does not publish, upload images, take payments, or update GitHub.</p>
+
+      <form id="product-form">
+        <label>Product name<input name="name" required maxlength="80"></label>
+        <label>Category
+          <select name="category">
+            <option>Air Plants</option>
+            <option>Succulents</option>
+            <option>Curious Creations</option>
+            <option>Other Little Things</option>
+          </select>
+        </label>
+        <label>Price or label<input name="price" placeholder="$18 or Ask Lisa" maxlength="30"></label>
+        <label>Quantity<input name="quantity" type="number" min="0" step="1" value="1"></label>
+        <label>Description<textarea name="description" required rows="5" maxlength="500"></textarea></label>
+        <label>Image file path<input name="image" value="assets/plant-closeup.webp" required></label>
+        <label>Image description<input name="alt" required maxlength="160"></label>
+        <label>Purchase or Facebook URL<input name="purchaseUrl" type="url" placeholder="https://"></label>
+        <div class="form-actions">
+          <button type="submit">Add demo listing</button>
+          <button class="secondary" type="button" id="export-json">Export JSON</button>
+          <button class="danger" type="button" id="clear-demo">Clear browser demo</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="panel">
+      <h2>Browser preview listings</h2>
+      <div id="admin-products" class="admin-products"></div>
+    </section>
+  </main>
+
+  <script src="admin.js" defer></script>
+</body>
+</html>

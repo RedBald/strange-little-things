@@ -1,0 +1,16 @@
+{
+  "name": "strange-little-things-demo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static staging site for Strange Little Things.",
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/server.mjs",
+    "build": "node scripts/build.mjs",
+    "test": "node scripts/test.mjs",
+    "check": "npm run build && npm run test"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
