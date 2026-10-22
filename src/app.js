@@ -39,7 +39,7 @@ function createProductCard(product, config) {
   illustration.setAttribute("role", "img");
   illustration.setAttribute("aria-label", `Decorative ${product.category} listing placeholder`);
   illustration.innerHTML = '<span class="placeholder-moon" aria-hidden="true">☾</span><span class="placeholder-plant" aria-hidden="true">❧</span><span class="placeholder-stars" aria-hidden="true">✦ · ✧</span>';
-  const approvedImage = typeof product.image === "string" && /^assets\/products\/[a-z0-9/_-]+\.(webp|png|jpg|jpeg)$/i.test(product.image) && !product.image.includes("..");
+  const approvedImage = typeof product.image === "string" && /^assets\/products\/[a-z0-9_-]+\.(webp|png|jpg|jpeg)$/i.test(product.image) && !product.image.includes("..");
   if (approvedImage && typeof product.imageAlt === "string" && product.imageAlt.trim()) {
     const image = document.createElement("img");
     image.className = "product-image";
