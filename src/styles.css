@@ -8,3 +8,12 @@
 @media(max-width:720px){.menu-button{display:block}.site-nav{position:absolute;top:100%;left:0;right:0;display:none;flex-direction:column;align-items:stretch;gap:0;padding:.75rem 1.25rem 1rem;background:rgba(255,253,249,.98);border-bottom:1px solid var(--line);box-shadow:0 18px 30px rgba(82,35,101,.12)}.site-nav.is-open{display:flex}.site-nav a{padding:.75rem .2rem}.section-heading{grid-template-columns:1fr;align-items:start}.category-band{grid-template-columns:1fr}.category-art{width:min(70vw,300px);margin:auto}.category-copy{text-align:center}.category-grid article{text-align:left}.social-section{flex-direction:column;align-items:flex-start}.manager-link,.site-footer{flex-direction:column;align-items:flex-start}}
 @media(max-width:540px){.brand small{display:none}.hero{padding:2.5rem 1rem 3rem;gap:1.75rem}h1{font-size:clamp(2.65rem,14vw,3.7rem)}.hero-actions .button{width:100%}.hero-art{width:100%;padding:.5rem;border-radius:28px}.hero-art img{border-radius:22px}.section{padding:3.5rem 1rem}.product-grid{grid-template-columns:1fr}.category-band,.social-section{margin-inline:1rem;border-radius:28px}.social-section .button{width:100%}.site-footer{padding-inline:1rem}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}}
+
+/* Product browsing and optional owner-approved catalog photography. */
+[hidden]{display:none!important}
+.reset-filter{display:inline-block;margin-top:.6rem;color:#8c366d;font-size:.86rem;font-weight:800;text-underline-offset:.25rem}
+.category-grid a{color:inherit;text-decoration-thickness:1px;text-underline-offset:.25rem}
+.category-grid a:hover,.category-grid a:focus-visible,.category-grid a[aria-current="true"]{color:#ffd4e9;text-decoration-thickness:3px}
+.product-image{display:block;width:100%;height:100%;object-fit:cover}
+.product-image-wrap .product-badge{z-index:2}
+.product-actions .is-disabled{cursor:not-allowed;opacity:.65;box-shadow:none}
