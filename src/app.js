@@ -39,7 +39,19 @@ function createProductCard(product, config) {
   illustration.setAttribute("role", "img");
   illustration.setAttribute("aria-label", `Decorative ${product.category} listing placeholder`);
   illustration.innerHTML = '<span class="placeholder-moon" aria-hidden="true">☾</span><span class="placeholder-plant" aria-hidden="true">❧</span><span class="placeholder-stars" aria-hidden="true">✦ · ✧</span>';
-  imageWrap.append(illustration, textElement("span", "product-badge", product.status));
+  const approvedImage = typeof product.image === "string" && /^assets\/products\/[a-z0-9/_-]+\.(webp|png|jpg|jpeg)$/i.test(product.image) && !product.image.includes("..");
+  if (approvedImage && typeof product.imageAlt === "string" && product.imageAlt.trim()) {
+    const image = document.createElement("img");
+    image.className = "product-image";
+    image.src = product.image;
+    image.alt = product.imageAlt.trim();
+    image.loading = "lazy";
+    imageWrap.append(image);
+  } else {
+    imageWrap.append(illustration);
+  }
+  const soldOut = (product.quantity !== undefined && product.quantity !== null && product.quantity !== "" && Number(product.quantity) <= 0) || /^sold[ -]?out$/i.test(String(product.status || ""));
+  imageWrap.append(textElement("span", "product-badge", soldOut ? "Sold out" : String(product.status || "Available")));
 
   const body = document.createElement("div");
   body.className = "product-body";
@@ -51,10 +63,14 @@ function createProductCard(product, config) {
   const actions = document.createElement("div");
   actions.className = "product-actions";
 
-  const purchaseLink = product.purchaseUrl || config.facebookUrl || "";
+  const validUrl = (value) => {
+    try { const url = new URL(value); return ["https:", "http:"].includes(url.protocol) ? url.href : ""; }
+    catch { return ""; }
+  };
+  const purchaseLink = validUrl(product.purchaseUrl) || validUrl(config.facebookUrl);
   const link = document.createElement("a");
   link.className = "button button-primary";
-  if (purchaseLink) {
+  if (soldOut) {\n    link.removeAttribute("href");\n    link.classList.add("is-disabled");\n    link.setAttribute("aria-disabled", "true");\n    link.textContent = "Sold out";\n  } else if (purchaseLink) {
     link.href = purchaseLink;
     link.target = "_blank";
     link.rel = "noopener";
@@ -98,7 +114,35 @@ async function initialize() {
     });
 
     const grid = document.querySelector("#product-grid");
-    products.forEach((product) => grid?.append(createProductCard(product, config)));
+    if (!Array.isArray(products)) throw new Error("Invalid product catalog");
+    let selectedCategory = "";
+    const groupOf = (product) => {
+      const category = String(product.category || "").toLowerCase();
+      if (category.includes("air plant")) return "Air Plants";
+      if (category.includes("succulent")) return "Succulents";
+      return "Curious Creations";
+    };
+    const render = () => {
+      const shown = selectedCategory ? products.filter((p) => groupOf(p) === selectedCategory) : products;
+      grid?.replaceChildren(...(shown.length
+        ? shown.map((p) => createProductCard(p, config))
+        : [textElement("p", "empty-products", "No items in this category yet.")]));
+      const reset = document.querySelector("#show-all");
+      if (reset) reset.hidden = !selectedCategory;
+      document.querySelectorAll("[data-category]").forEach((link) => {
+        if (link.dataset.category === selectedCategory) link.setAttribute("aria-current", "true");
+        else link.removeAttribute("aria-current");
+      });
+    };
+    document.querySelectorAll("[data-category]").forEach((link) => link.addEventListener("click", () => {
+      selectedCategory = link.dataset.category || "";
+      render();
+    }));
+    document.querySelector("#show-all")?.addEventListener("click", () => {
+      selectedCategory = "";
+      render();
+    });
+    render();
   } catch (error) {
     const grid = document.querySelector("#product-grid");
     if (grid) {
